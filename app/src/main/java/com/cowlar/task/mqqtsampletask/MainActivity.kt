@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         mqttClient = MQTTClient(this, MQTT_SERVER_URI, MQTT_CLIENT_ID)
          onBackPressDisConnect()
-        initViewSetting()
+        initViewClickSetup()
     }
 
      fun onBackPressDisConnect() {
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 
             })
     }
-    fun initViewSetting(){
+    fun initViewClickSetup(){
         binding.buttonConnectMqqt.setOnClickListener {
                 initConnectMqttBroker()
         }
